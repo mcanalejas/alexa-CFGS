@@ -137,19 +137,20 @@ const CFGS_MAP = {
     ]
 }
 
-//console.log(Object.keys(CFGS_MAP).length);
-const phrase = "Vidrio y Cerámica";
 
+const phrase = "Sanidad";
 var speak_output = "";
 
 
 if (CFGS_MAP[phrase]) {
     var grados = "La categoria " + phrase + " tiene como titulaciones: ";
     for (var i of CFGS_MAP[phrase]) {
-        grados += i + ",";
+        grados += i + ", ";
     }
-    speak_output = grados.substr(0, grados.length - 1) + ".";
+    speak_output = grados.substr(0, grados.length - 2) + ".";
 } else {
     speak_output = "La categoría dicha no existe.";
 }
-console.log(speak_output)
+
+
+console.log(speak_output);
