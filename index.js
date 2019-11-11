@@ -138,6 +138,7 @@ const CFGS_MAP = {
 }
 
 
+
 const phrase = "Sanidad";
 var speak_output = "";
 
