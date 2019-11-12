@@ -141,7 +141,16 @@ const CFGS_MAP = {
 
 const phrase = "Sanidad";
 var speak_output = "";
+var categoria = "";
 
+function getMapKeysValues(x) {
+    for (var cat in x) {
+        categoria += cat + ', ';
+    }
+    console.log(`Bienvenido a grados superiores España, estos son las categorías que hay: ${categoria},de qué categoría te gustaría saber que grados hay?`);
+}
+
+getMapKeysValues(CFGS_MAP);
 
 if (CFGS_MAP[phrase]) {
     var grados = "La categoria " + phrase + " tiene como titulaciones: ";
@@ -154,4 +163,4 @@ if (CFGS_MAP[phrase]) {
 }
 
 
-console.log(speak_output);
+//console.log(speak_output);
